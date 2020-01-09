@@ -1,0 +1,171 @@
+
+.internal_wrapper {
+
+	.content {
+		text-align: left;
+
+		h1 {
+			background: $gray-bg;
+			font-size: 60px;
+			font-weight: bold;
+			padding: 30px;
+			letter-spacing: 4px;
+		}
+
+		.product-box {
+			display: flex;
+			justify-content: space-around;
+			margin: 50px auto;
+
+			@include flex-col-layout();
+
+			h2 {
+				font-weight: 500;
+			}
+
+			>div {
+				display: flex;
+				align-items: center;
+				width: 45%;
+
+				@include mobile-full-width();
+
+				@media screen and (max-width: $lg-breakpoint){
+		  			margin-top: 50px;   
+		  		}
+
+				&:first-child {
+					align-items: flex-end;
+					background: url('../img/noble-brown.png');
+					height: 325px;
+
+					h2 {
+						margin-bottom: 0;
+					}
+
+					.textbox {
+						align-items: center;
+						background: rgba(0,0,0,0.5);
+						color: $white;
+						display: flex;
+						justify-content: space-between;
+						padding: 12px;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.product-description {
+			display: flex;
+			justify-content: space-between;
+
+			@include flex-col-layout();
+
+			.product-image {
+				margin-top: -150px;
+
+				@media screen and (max-width: $lg-breakpoint){
+		  			margin-top: 40px;   
+		  		}
+			}
+
+			.product-slider {
+				margin-top: -70px;
+				width: 240px;
+
+				@include translate-x-center();
+
+				.slick-prev,
+				.slick-next {
+					top: 40%;
+
+					&:before {
+						color: $black;
+						opacity: .5;
+						font-size: 45px;
+					}
+				}
+
+				.slick-prev {
+					left: -50px;
+				}
+
+				>div {
+					align-items: center;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					p {
+						font-weight: 600;
+						margin-top: 10px;
+						text-align: center;
+						width: 100%;
+					}
+				}
+			}
+
+			>div {
+				width: 45%;
+
+				@include mobile-full-width();
+			}
+		}
+
+		.video-boxes {
+			margin-top: 120px;
+			display: flex;
+			justify-content: space-between;
+			margin: 50px auto;
+
+			@include flex-col-layout();
+
+			>div {
+				align-items: flex-end;
+				box-shadow: $default-box-shadow;
+				background: pink;
+				display: flex;
+				height: 350px;
+				width: 48%;
+
+				&:first-child {
+					background: url('../img/alcantara-seat.png');
+					background-position: center;
+					background-size: cover;
+				}
+				&:nth-child(2) {
+					background: url('../img/satisfied-customer.png');
+					background-position: center;
+					background-size: cover;
+				}
+
+				@include mobile-full-width();
+
+				@media screen and (max-width: $lg-breakpoint){
+		  			margin-top: 50px;   
+		  		}
+
+		  		.textbox {
+						align-items: center;
+						color: $white;
+						text-shadow: $default-font-shadow;
+						display: flex;
+						justify-content: space-between;
+						padding: 0 20px;
+						width: 100%;
+
+						h2 {
+							font-size: 28px;
+							text-transform: uppercase;
+						}
+
+						img {
+							height: auto;
+							width: 80px;
+						}
+					}
+			}
+		}
+	}
+}

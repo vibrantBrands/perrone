@@ -1,2 +1,2 @@
-# perrone
-C5 Theme for the Perrone web site
+# apff
+C5 theme for Albany Police and Fire Foundation

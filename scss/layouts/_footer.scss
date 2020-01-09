@@ -1,0 +1,81 @@
+
+footer {
+	background: $gray-bg;
+	padding: 20px 0;
+	margin: 100px 0 0 $sidebar-width;
+
+	@media screen and (max-width: $lg-breakpoint){
+		margin-left: 0;
+	}
+
+	.container {
+		display: flex;
+		justify-content: center;
+
+		@include flex-col-layout();
+
+		>div {
+			border-radius: 10px;
+			color: $white;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin: 0 5px;
+			padding: 40px 0;
+			text-align: center;
+			width: 30%;
+
+			@media screen and (max-width: $lg-breakpoint){
+				margin: 0;
+			}
+
+			@include mobile-full-width();
+
+			&:first-child {
+				background: url('../img/europe-contact-bg.png') no-repeat;
+				background-size: cover;
+			}
+
+			&:nth-child(2) {
+				padding: 0;
+
+				>div {
+					border-radius: 10px;
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: column;
+					height: 50%;
+					justify-content: center;
+
+					&:first-child {
+						@media screen and (max-width: $lg-breakpoint){
+							display: none;
+						}
+					}
+
+					@media screen and (max-width: $lg-breakpoint){
+						padding: 40px 0;
+					}
+				}
+				p {
+					color: $black;
+				}
+				.inner {
+					background: url('../img/usa-contact-bg.png') no-repeat;
+					background-size: cover;
+
+					p {
+						color: $white;
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				background: url('../img/asia-contact-bg.png') no-repeat;
+				background-size: cover;
+			}
+		}
+
+	}
+}
