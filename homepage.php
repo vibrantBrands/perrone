@@ -21,7 +21,7 @@
 					<h1>Experience the richness of performance leather</h1>
 					<p>Noble</p>
 					<img src="<?php echo $this->getThemePath(); ?>/img/noble-brown.png" class="product-pic" />
-					<a href="http://www.cnet.com">
+					<a href="http://www.google.com">
 						<div class="product-cta">
 							<img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">
 							<div class="text">View this product</div>
@@ -34,7 +34,7 @@
 					<h1>Experience the richness of performance leather</h1>
 					<p>Noble</p>
 					<img src="<?php echo $this->getThemePath(); ?>/img/noble-brown.png" class="product-pic"/>
-					<a href="http://www.cnet.com">
+					<a href="http://www.google.com">
 						<div class="product-cta">
 							<img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">
 							<div class="text">View this product</div>
@@ -47,7 +47,7 @@
 					<h1>Experience the richness of performance leather</h1>
 					<p>Noble</p>
 					<img src="<?php echo $this->getThemePath(); ?>/img/noble-brown.png" class="product-pic"/>
-					<a href="http://www.cnet.com">
+					<a href="http://www.google.com">
 						<div class="product-cta">
 							<img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">
 							<div class="text">View this product</div>
@@ -60,7 +60,7 @@
 					<h1>Experience the richness of performance leather</h1>
 					<p>Noble</p>
 					<img src="<?php echo $this->getThemePath(); ?>/img/noble-brown.png" class="product-pic"/>
-					<a href="http://www.cnet.com">
+					<a href="http://www.google.com">
 						<div class="product-cta">
 							<img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">
 							<div class="text">View this product</div>

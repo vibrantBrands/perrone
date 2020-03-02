@@ -15,49 +15,52 @@
 </nav>
 
 <div class="content">
-	<h1>Alcantara</h1>
+	<?php
+            $a = new Area('Product Name');
+            $a->display($c);
+    ?>  
 	<div class="product-description container">
 		<div>
-			<p>Alcantara&reg; is already globally recognized in the high end fashion, furnishing and automotive markets. Now, the world of aviation has embraced Alcantara’s® proven qualities as an exclusive, high-performance luxury material.</p> 
-			<p>Comfort, style and elegance make it the ideal travelling companion for the interiors of private jets and helicopters and for those aircraft of the world’s biggest airlines.</p>
+			<?php
+            	$a = new Area('Product Top Graf');
+            	$a->display($c);
+        	?>  
 		</div>
 		<div>
-			<img src="<?php echo $this->getThemePath(); ?>/img/noble-brown.png" class="product-image"/>
 			<div class="slider-wrapper">
 				<div class="product-slider">
-					<div>
-						<img src="<?php echo $this->getThemePath(); ?>/img/samples/fabric-closeup.png"/>
-						<p>PUNTINO</p>
-					</div>
-					<div>
-						<img src="<?php echo $this->getThemePath(); ?>/img/samples/fabric-closeup.png"/>
-						<p>RUFINO</p>
-					</div>
-					<div>
-						<img src="<?php echo $this->getThemePath(); ?>/img/samples/fabric-closeup.png"/>
-						<p>MANCHEGO</p>
-					</div>
+					<?php
+            			$a = new Area('Product Images');
+            			$a->display($c);
+        			?> 
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="container full">
+		<?php
+            $a = new Area('Product Description');
+            $a->display($c);
+        ?>
+	</div>
 	<div class="video-boxes container">
-		<div>
-			<div class="textbox">
-				<h2>Alcantra Care</h2>
-				<a href="https://www.youtube.com/watch?v=2YPdBv2Y2MM" data-lity>
-					<img src="<?php echo $this->getThemePath(); ?>/img/play-icon.png"/>
-				</a>
+		
+		<a href="https://youtu.be/2YPdBv2Y2MM" data-lity>
+			<div>
+				<div class="textbox">
+					<h2>Alcantra Care</h2>
+						<img src="<?php echo $this->getThemePath(); ?>/img/play-icon.png"/>
+				</div>
 			</div>
-		</div>
-		<div>
-			<div class="textbox">
-				<h2>Satisfied Customers</h2>
-				<a href="https://www.youtube.com/watch?v=vCdZlUAIR0A" data-lity>
-					<img src="<?php echo $this->getThemePath(); ?>/img/play-icon.png"/>
-				</a>
+		</a>
+		<a href="https://youtu.be/aCQBEoOwLBs" data-lity>
+			<div>
+				<div class="textbox">
+					<h2>Satisfied Customers</h2>
+						<img src="<?php echo $this->getThemePath(); ?>/img/play-icon.png"/>
+				</div>
 			</div>
-		</div>
+		</a>
 	</div>
 
 </div>

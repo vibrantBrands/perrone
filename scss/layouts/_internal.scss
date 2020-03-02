@@ -4,6 +4,16 @@
 	.content {
 		text-align: left;
 
+		ul {
+			padding-left: 30px;
+
+	      li {
+	        font-size: 16px;
+	        list-style-type: disc;
+	        margin-top: 8px;
+	      }
+	    }
+
 		h1 {
 			background: $gray-bg;
 			font-size: 60px;
@@ -17,40 +27,52 @@
 			justify-content: space-around;
 			margin: 50px auto;
 
-			@include flex-col-layout();
+			@include flex-col-layout(1300px);
 
 			h2 {
 				font-weight: 500;
 			}
 
 			>div {
-				display: flex;
-				align-items: center;
+				margin-top: 20px;
+				min-height: 300px;
 				width: 45%;
 
-				@include mobile-full-width();
+				@include mobile-full-width(1300px);
 
 				@media screen and (max-width: $lg-breakpoint){
 		  			margin-top: 50px;   
 		  		}
 
 				&:first-child {
-					align-items: flex-end;
-					background: url('../img/noble-brown.png');
-					height: 325px;
+					//height: 325px;
+					position: relative;
+
+					img {
+						width: 100%;
+					}
 
 					h2 {
-						margin-bottom: 0;
+						font-size: 24px;
+						letter-spacing: 1px;
+						margin: 0;
 					}
 
 					.textbox {
 						align-items: center;
 						background: rgba(0,0,0,0.5);
+						bottom: 0;
 						color: $white;
 						display: flex;
 						justify-content: space-between;
 						padding: 12px;
+						position: absolute;
 						width: 100%;
+						z-index: 2;
+
+						img {
+							width: 50px;
+						}
 					}
 				}
 			}
@@ -71,8 +93,7 @@
 			}
 
 			.product-slider {
-				margin-top: -70px;
-				width: 240px;
+				width: 90%;
 
 				@include translate-x-center();
 
@@ -121,51 +142,96 @@
 
 			@include flex-col-layout();
 
-			>div {
-				align-items: flex-end;
-				box-shadow: $default-box-shadow;
-				background: pink;
-				display: flex;
+			a {
 				height: 350px;
+				text-decoration: none;
 				width: 48%;
 
+				>div {
+					align-items: flex-end;
+					box-shadow: $default-box-shadow;
+					display: flex;
+					height: 350px;
+					width: 100%;
+
+					@include mobile-full-width();
+
+					@media screen and (max-width: $lg-breakpoint){
+			  			margin-top: 50px;   
+			  		}
+				}
+
 				&:first-child {
-					background: url('../img/alcantara-seat.png');
-					background-position: center;
-					background-size: cover;
-				}
-				&:nth-child(2) {
-					background: url('../img/satisfied-customer.png');
-					background-position: center;
-					background-size: cover;
-				}
-
-				@include mobile-full-width();
-
-				@media screen and (max-width: $lg-breakpoint){
-		  			margin-top: 50px;   
-		  		}
-
-		  		.textbox {
-						align-items: center;
-						color: $white;
-						text-shadow: $default-font-shadow;
-						display: flex;
-						justify-content: space-between;
-						padding: 0 20px;
-						width: 100%;
-
-						h2 {
-							font-size: 28px;
-							text-transform: uppercase;
-						}
-
-						img {
-							height: auto;
-							width: 80px;
-						}
+					
+					>div {
+						background: url('../img/alcantara-seat.png');
+						background-position: center;
+						background-size: cover;
 					}
+				}
+
+				&:nth-child(2) {
+					
+					>div {
+						background: url('../img/satisfied-customer.png');
+						background-position: center;
+						background-size: cover;
+					}
+				}
+
+				.textbox {
+					align-items: center;
+					color: $white;
+					text-shadow: $default-font-shadow;
+					display: flex;
+					justify-content: space-between;
+					padding: 0 20px;
+					width: 100%;
+
+					h2 {
+						font-size: 28px;
+						text-transform: uppercase;
+					}
+
+					img {
+						height: auto;
+						width: 80px;
+					}
+				}
 			}
 		}
 	}
+
+	.landing {
+		height: 100vh;
+
+		.landing-slider {
+			background: black;
+			height: 800px;
+			overflow: hidden;
+
+			.inner {
+				align-items: flex-start;
+
+				h1 {
+					background: none;
+					margin-top: 160px;
+					text-align: center;
+					width: 800px;
+				}
+
+				p {
+					top: 420px
+				}
+			}
+
+			.slick-prev,
+			.slick-next {
+				top: 55%;
+				z-index: 2;
+			}
+		}
+	}
+
+
 }

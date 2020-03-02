@@ -1,11 +1,22 @@
 
-footer {
+.perrone footer {
 	background: $gray-bg;
 	padding: 20px 0;
 	margin: 100px 0 0 $sidebar-width;
 
 	@media screen and (max-width: $lg-breakpoint){
 		margin-left: 0;
+	}
+
+	h1, h2 {
+		font-family: $main-font;
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 20px;
 	}
 
 	.container {
@@ -30,6 +41,11 @@ footer {
 				margin: 0;
 			}
 
+			a {
+				color: $footer-alt-color;
+			}
+
+
 			@include mobile-full-width();
 
 			&:first-child {
@@ -38,37 +54,8 @@ footer {
 			}
 
 			&:nth-child(2) {
-				padding: 0;
-
-				>div {
-					border-radius: 10px;
-					display: flex;
-					flex-wrap: wrap;
-					flex-direction: column;
-					height: 50%;
-					justify-content: center;
-
-					&:first-child {
-						@media screen and (max-width: $lg-breakpoint){
-							display: none;
-						}
-					}
-
-					@media screen and (max-width: $lg-breakpoint){
-						padding: 40px 0;
-					}
-				}
-				p {
-					color: $black;
-				}
-				.inner {
-					background: url('../img/usa-contact-bg.png') no-repeat;
-					background-size: cover;
-
-					p {
-						color: $white;
-					}
-				}
+				background: url('../img/usa-contact-bg.png') no-repeat;
+				background-size: cover;
 			}
 
 			&:nth-child(3) {

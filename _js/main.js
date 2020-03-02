@@ -38,6 +38,19 @@ $( document ).ready(function() {
       lazyLoad: 'ondemand',
     });
 
+    $('.landing-slider').slick({
+      autoplay: false,
+      arrows: true,
+      infinite: true,
+      slidesToShow: 1,
+      dots: false,
+      slidesToScroll: 1,
+      cssEase: "ease",
+      autoplaySpeed: 1000,
+      pauseOnHover: false,
+      lazyLoad: 'ondemand',
+    });
+
   $('.menu-toggle').click(function(){
         $(this).toggleClass('active');
         $(this).toggleClass('inactive');
