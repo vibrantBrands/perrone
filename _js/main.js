@@ -39,14 +39,14 @@ $( document ).ready(function() {
     });
 
     $('.landing-slider').slick({
-      autoplay: false,
-      arrows: true,
+      autoplay: true,
       infinite: true,
       slidesToShow: 1,
+      arrows: false,
       dots: false,
       slidesToScroll: 1,
       cssEase: "ease",
-      autoplaySpeed: 1000,
+      autoplaySpeed: 3000,
       pauseOnHover: false,
       lazyLoad: 'ondemand',
     });

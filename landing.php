@@ -14,38 +14,45 @@
 		?>
 </nav>
 
-	<div class="content landing">
-		<div class="landing-slider">
-			<div>
-				<div class="inner">
-					<h1>Experience the richness of performance leather</h1>
-					<p>
-						CORPORATE | VIP
-					</p>
+	<div class="content">
+		<div class="tagline">Experience the richness of performance leather</div>
+			<div class="links">
+				<div>CORPORATE | VIP</div>
+				<div>AIRLINES</div>
+				<div>ALCANTARA</div>
+			</div>
+			<div class="social">
+				<div>
+					<i class="fab fa-twitter"></i>
+				</div>
+				<div>
+					<i class="fab fa-youtube"></i>
+				</div>
+				<div>
+					<i class="fab fa-instagram"></i>
+				</div>
+				<div>
+					<i class="fab fa-linkedin"></i>
+				</div>
+			</div>
+
+		<div class="landing">
+			
+			<div class="landing-slider">
+				<div>
+					<img src="<?php echo $this->getThemePath(); ?>/img/brown-leather.png" class="product-pic" />
+				</div>
+				<div>
+					<img src="<?php echo $this->getThemePath(); ?>/img/brown-leather.png" class="product-pic" />
+				</div>
+				<div>
+					<img src="<?php echo $this->getThemePath(); ?>/img/brown-leather.png" class="product-pic" />
+				</div>
+				<div>
 					<img src="<?php echo $this->getThemePath(); ?>/img/brown-leather.png" class="product-pic" />
 				</div>
 			</div>
-			<div>
-				<div class="inner">
-					<h1>Experience the richness of performance leather</h1>
-					<p>AIRLINES</p>
-					<img src="<?php echo $this->getThemePath(); ?>/img/brown-leather.png" class="product-pic" />
-				</div>
-			</div>
-			<div>
-				<div class="inner">
-					<h1>Experience the richness of performance leather</h1>
-					<p>ALCANTARA</p>
-					<img src="<?php echo $this->getThemePath(); ?>/img/brown-leather.png" class="product-pic" />
-				</div>
-			</div>
-			<div>
-				<div class="inner">
-					<h1>Experience the richness of performance leather</h1>
-					<p>Noble</p>
-					<img src="<?php echo $this->getThemePath(); ?>/img/brown-leather.png" class="product-pic" />
-				</div>
-			</div>
+			
 		</div>
 	</div>
 
