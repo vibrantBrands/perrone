@@ -44,6 +44,7 @@
 @mixin mobile-full-width($breakpoint: $lg-breakpoint, $percentage: 100%) {
   
   @media screen and (max-width: $breakpoint){
+      margin-top: 15px;
       width: $percentage;
     }
 }

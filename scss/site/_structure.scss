@@ -25,6 +25,10 @@
     	line-height: 30px;
     }
 
+    ul {
+      margin-top: 20px;
+    }
+
    	nav.navigation {
   		background: $black;
   		color: $white;
@@ -37,19 +41,20 @@
   		z-index: 100;
 
   		@media screen and (max-width: $lg-breakpoint){
-  			height: 80px;
-  			width: 100%;
-  			float: none;     
+        display: flex; 
+        height: 80px;
+        width: 100%;
+        justify-content: center;
   		}
 
 		.nav {
-			padding: 30px 0 0 35px;
+			padding: 10px 0 150px 35px;
 
 			@media screen and (max-width: $lg-breakpoint){
 		      align-items: flex-end;
 		      background: $black;
 		      left: 0;
-		      top: 70px;
+		      top: 60px;
 		      display: none;
 		      height: 100vh;
 		      justify-content: flex-start;
@@ -62,7 +67,7 @@
 				text-decoration: none;
 
 				&:hover {
-					color: #ffcc00;
+					color: #8f989d;
 				}
 			}
 
@@ -75,16 +80,17 @@
         }
 
 				ul {
-					padding: 10px 0 10px 8px;
+					padding: 0 0 10px 8px;
+          margin-top: 10px;
 				}
 
 				li {
-					margin: 8px auto;
-
-          .fas {
-            display: none;
-          }
+					margin: 12px auto 0;
 				}
+
+        &.secondary {
+          margin-top: 150px;
+        }
 			}
 
       .nav-selected {
@@ -104,27 +110,25 @@
 		.logo {
 			margin: 20px 0 0 20px;
 
-			@media screen and (max-width: $lg-breakpoint) {
-		        float: right;
-		        margin-top: 5px;
-		    } 
+			@media screen and (max-width: $lg-breakpoint) { 
+		    margin-top: 5px;
+		  } 
 		}
 
 		/* mobile menu styles */
 
     .toggle-wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 22px;
       height: 26px;
-      position: fixed;
-      top: 10px;
       left: 30px;
+      position: fixed;
+      top: 20px;
+      width: 80px;
       z-index: 5;
 
       p {
+        float: right;
         font-size: 0.6em;
-        margin: 35px 0 0;
+        //margin: 35px 0 0;
       }
 
       @media screen and (min-width: $lg-breakpoint) {
@@ -210,6 +214,17 @@
         }
       }
     }
+
+    &.blue {
+      background: $blue-theme;
+
+      .nav {
+
+        @media screen and (max-width: $lg-breakpoint){
+          background: $blue-theme;
+        }
+      }
+    }
 	}
 
 	// content areas 
@@ -228,6 +243,12 @@
 			max-width: 1600px;
 			text-align: left;
 			width: 90%;
+
+      @include flex-col-layout();
+
+      >div {
+        @include mobile-full-width();
+      }
 		}
 
     .product-cta {
@@ -236,6 +257,11 @@
         cursor: pointer;
         display: flex;
         z-index: 20;
+
+        &:hover {
+          transform: scale(1.1, 1.1);
+          transition: all .4s ease-out;
+        }
 
         @media screen and (max-width: $lg-breakpoint){
           top: 60%;
@@ -263,10 +289,6 @@
         .text a {
           color: white;
           text-decoration: none;
-
-          &:hover {
-            color: #ffcc00;
-          }
         }
       }
 

@@ -5,7 +5,7 @@
 	
 	<?php 	
 		  $bt = BlockType::getByHandle('autonav');
-		  $bt->controller->displayPages = 'top'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
+		  $bt->controller->displayPages = 'second_level'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
 		  $bt->controller->displayPagesCID = ''; // if display pages is set ‘custom’
 		  $bt->controller->orderBy = 'display_asc';  // 'chrono_desc', 'chrono_asc', 'alpha_asc', 'alpha_desc', 'display_desc','display_asc'             
 		  $bt->controller->displaySubPages = 'relevant';  //none', 'all, 'relevant_breadcrumb', 'relevant'          
@@ -102,16 +102,17 @@
 			<h1>Testimonials</h1>
 			<div class="scroller">
 				<div>
-					<p>The speed at which Perrone operates is unparalleled. Because of their ability to adapt to our needs we finished outfitting our jets with custom material a week ahead of schedule. You just can’t get this level of service anywhere else.</p><br />
-					— CEO, <strong>Fortune 500 Company</strong> 
+					<p>"In evaluating product choices for upgrading seat-covers on our short haul fleet, Aer Lingus reviewed several options across the market and determined that Perrone’s EnduraLite was the optimum choice based on weight and strength characteristics, design and colour options available, and the quality of the experience for passengers. Perrone was able to provide an integrated solution in terms of design, manufacture, certification, and support for fitting of the seat-covers; all of which was achieved flexibly and within challenging timelines."</p><br />
+					— Michael Gannon, Director Product & Brand, <strong>Aer Lingus</strong> 
 				</div>
 				<div>
-					<p>The speed at which Perrone operates is unparalleled. Because of their ability to adapt to our needs we finished outfitting our jets with custom material a week ahead of schedule. You just can’t get this level of service anywhere else.</p><br />
-					— CEO, <strong>Fortune 500 Company</strong> 
+					<p>"After completing a review of the total cost of ownership, which included reviewing side by side performance test results, the cost of material, expected life, ongoing maintenance and cleaning costs, Air Wisconsin selected Perrone’s EnduraLite. This product met our requirements of reducing operating costs associated with passenger seat cover maintenance and out of service time, reduction in space inventory and weight savings. Air Wisconsin anticipates several more years of service life with our existing EnduraLite covers. For operators who may be considering a light weight, durable and low maintenance seat cover material option, we would strongly recommend Perrone’s EnduraLite synthetic leather."</p><br />
+					— Janet Huculak, Vice President – Maintenance & Procurement
+<strong>Air Wisconsin Airline Corporation</strong>
 				</div>
 				<div>
-					<p>The speed at which Perrone operates is unparalleled. Because of their ability to adapt to our needs we finished outfitting our jets with custom material a week ahead of schedule. You just can’t get this level of service anywhere else.</p><br />
-					— CEO, <strong>Fortune 500 Company</strong> 
+					<p>"Geven has worked with Perrone Aerospace as a trusted supplier for many years. Perrone has consistently supplied us with exceptional customer service as well as products which allow us to provide our customers with refreshed cabin environments and considerable weight savings. We view Perrone Aerospace as a valued partner with shared corporate values and look forward to continuing this relationship into the future."</p><br />
+					— Rodolfo Baldascino, Marketing & Sales Manager, <strong>Geven</strong>
 				</div>
 			</div>
 		</div>

@@ -1,246 +1,481 @@
-
 .internal_wrapper {
 
-	.content {
-		//text-align: left;
+    .content {
 
-		ul {
-			padding-left: 30px;
+        ul {
+            padding-left: 30px;
 
-	      li {
-	        font-size: 16px;
-	        list-style-type: disc;
-	        margin-top: 8px;
-	      }
-	    }
+            li {
+                font-size: 16px;
+                list-style-type: disc;
+                margin-top: 8px;
+            }
+        }
 
-		h1 {
-			background: $gray-bg;
-			font-size: 60px;
-			font-weight: bold;
-			letter-spacing: 4px;
-			text-align: left;
-			padding: 30px;
-		}
+        h1 {
+            background: $gray-bg;
+            font-size: 60px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-align: left;
+            padding: 30px;
+        }
 
-		.image-slider {
+        .image-slider {
 
-			h1 {
-				background: none;
-				text-align: center;
-			}
-		}
+            h1 {
+                background: none;
+                text-align: center;
+            }
+        }
 
-		.product-box {
-			display: flex;
-			justify-content: space-around;
-			margin: 50px auto;
+        .product-box {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px auto;
+            overflow: hidden;
 
-			@include flex-col-layout(1300px);
+            @include flex-col-layout();
 
-			h2 {
-				font-weight: 500;
-			}
+            h2 {
+                font-weight: 500;
+            }
 
-			>div {
-				margin-top: 20px;
-				min-height: 300px;
-				width: 45%;
+            >div {
+                margin-top: 20px;
+                overflow: hidden;
+                width: 45%;
 
-				@include mobile-full-width(1300px);
+                @include mobile-full-width();
 
-				@media screen and (max-width: $lg-breakpoint){
-		  			margin-top: 50px;   
-		  		}
+                @media screen and (max-width: $lg-breakpoint) {
+                    margin-top: 50px;
+                }
 
-				&:first-child {
-					//height: 325px;
-					position: relative;
+                &:first-child {
+                    font-size: 24px;
+                    letter-spacing: 1;
+                    max-height: 288px;
+                    position: relative;
 
-					img {
-						width: 100%;
-					}
+                    img {
+                        width: 100%;
+                    }
 
-					h2 {
-						font-size: 24px;
-						letter-spacing: 1px;
-						margin: 0;
-					}
+                    h2 {
+                        font-size: 24px;
+                        letter-spacing: 1px;
+                        margin: 0;
+                    }
 
-					.textbox {
-						align-items: center;
-						background: rgba(0,0,0,0.5);
-						bottom: 0;
-						color: $white;
-						display: flex;
-						justify-content: space-between;
-						padding: 12px;
-						position: absolute;
-						width: 100%;
-						z-index: 2;
+                    .textbox {
+                        align-items: center;
+                        background: rgba(0, 0, 0, 0.75);
+                        bottom: 0;
+                        color: $white;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 12px;
+                        position: absolute;
+                        width: 100%;
+                        z-index: 2;
 
-						img {
-							width: 50px;
-						}
-					}
-				}
-			}
-		}
+                        img {
+                            width: 50px;
+                        }
 
-		.product-description {
-			display: flex;
-			justify-content: space-between;
+                        .product-cta {
+                            font-size: 16px;
+                        }
+                    }
+                }
 
-			@include flex-col-layout();
+                &:last-child {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+        }
 
-			.product-image {
-				margin-top: -150px;
+        .product-description {
+            display: flex;
+            justify-content: space-between;
 
-				@media screen and (max-width: $lg-breakpoint){
-		  			margin-top: 40px;   
-		  		}
-			}
+            @include flex-col-layout();
 
-			.product-slider {
-				width: 90%;
+            .product-image {
+                margin-top: -150px;
 
-				@include translate-x-center();
+                @media screen and (max-width: $lg-breakpoint) {
+                    margin-top: 40px;
+                }
+            }
 
-				.slick-prev,
-				.slick-next {
-					top: 40%;
+            .product-slider {
+                width: 90%;
 
-					&:before {
-						color: $black;
-						opacity: .5;
-						font-size: 45px;
-					}
-				}
+                @include translate-x-center();
 
-				.slick-prev {
-					left: -50px;
-				}
+                .slick-prev,
+                .slick-next {
+                    top: 40%;
 
-				>div {
-					align-items: center;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
+                    &:before {
+                        color: $black;
+                        opacity: .5;
+                        font-size: 45px;
+                    }
+                }
 
-					p {
-						font-weight: 600;
-						margin-top: 10px;
-						text-align: center;
-						width: 100%;
-					}
-				}
-			}
+                .slick-prev {
+                    left: -50px;
+                }
 
-			>div {
-				width: 45%;
+                >div {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
 
-				@include mobile-full-width();
-			}
-		}
+                    p {
+                        font-weight: 600;
+                        margin-top: 10px;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
 
-		.video-boxes {
-			margin-top: 120px;
-			display: flex;
-			justify-content: space-between;
-			margin: 50px auto;
+            >div {
+                width: 45%;
 
-			@include flex-col-layout();
+                @include mobile-full-width();
+            }
+        }
 
-			a {
-				height: 350px;
-				text-decoration: none;
-				width: 48%;
+        .video-boxes {
+            margin-top: 120px;
+            display: flex;
+            justify-content: space-between;
+            margin: 50px auto;
 
-				>div {
-					align-items: flex-end;
-					box-shadow: $default-box-shadow;
-					display: flex;
-					height: 350px;
-					width: 100%;
+            @include flex-col-layout();
 
-					@include mobile-full-width();
+            a {
+                height: 350px;
+                text-decoration: none;
+                width: 48%;
 
-					@media screen and (max-width: $lg-breakpoint){
-			  			margin-top: 50px;   
-			  		}
-				}
+                >div {
+                    align-items: flex-end;
+                    box-shadow: $default-box-shadow;
+                    display: flex;
+                    height: 350px;
+                    width: 100%;
 
-				&:first-child {
-					
-					>div {
-						background: url('../img/alcantara-seat.png');
-						background-position: center;
-						background-size: cover;
-					}
-				}
+                    @include mobile-full-width();
 
-				&:nth-child(2) {
-					
-					>div {
-						background: url('../img/satisfied-customer.png');
-						background-position: center;
-						background-size: cover;
-					}
-				}
+                    @media screen and (max-width: $lg-breakpoint) {
+                        margin-top: 50px;
+                    }
+                }
 
-				.textbox {
-					align-items: center;
-					color: $white;
-					text-shadow: $default-font-shadow;
-					display: flex;
-					justify-content: space-between;
-					padding: 0 20px;
-					width: 100%;
+                &:first-child {
 
-					h2 {
-						font-size: 28px;
-						text-transform: uppercase;
-					}
+                    >div {
+                        background: url('../img/alcantara-seat.png');
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
 
-					img {
-						height: auto;
-						width: 80px;
-					}
-				}
-			}
-		}
-	}
+                &:nth-child(2) {
 
-	.landing {
-		height: 100vh;
+                    >div {
+                        background: url('../img/satisfied-customer.png');
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
 
-		.landing-slider {
-			background: black;
-			height: 800px;
-			overflow: hidden;
+                .textbox {
+                    align-items: center;
+                    color: $white;
+                    text-shadow: $default-font-shadow;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 20px;
+                    width: 100%;
 
-			.inner {
-				align-items: flex-start;
+                    h2 {
+                        font-size: 28px;
+                        text-transform: uppercase;
+                    }
 
-				h1 {
-					background: none;
-					margin-top: 160px;
-					text-align: center;
-					width: 800px;
-				}
+                    img {
+                        height: auto;
+                        width: 80px;
+                    }
+                }
+            }
+        }
 
-				p {
-					top: 420px
-				}
-			}
+        &.homepage {
 
-			.slick-prev,
-			.slick-next {
-				top: 55%;
-				z-index: 2;
-			}
-		}
-	}
+            .hero-wrapper {
+                align-items: flex-start;
+                display: flex;
+                height: 700px;
+                justify-content: center;
+                overflow: hidden;
+
+                @media screen and (max-width: 1300px) {
+                    height: 530px;
+                }
+
+                @media screen and (max-width: $lg-breakpoint) {
+                    height: auto;
+                }
+            }
+
+            h1 {
+                background: none;
+                text-align: center;
+            }
+
+            .image-slider {
+
+                .slick-dots {
+                   top: 440px;
+                }
+
+                .slick-arrow {
+                    bottom: auto;
+                    top: 480px;
+
+                    @media screen and (max-width: $md-breakpoint) {
+                        top: 86%;
+                    }
+
+                    @media screen and (max-width: $sm-breakpoint) {
+                        display: none !important;
+                    }
+                }
+
+                .slick-prev {
+                    @media screen and (max-width: $md-breakpoint) {
+                        left: 35%;
+                    }
+                }
+
+                .slick-next {
+                    @media screen and (max-width: $md-breakpoint) {
+                        left: 63%;
+                    }
+                }
+
+                p {
+                    top: 460px;
+                    font-size: 24px;
+                    text-shadow: $default-font-shadow;
+
+                    @media screen and (max-width: $md-breakpoint) {
+                        top: 83%;
+                    }
+                }
+
+                .inner {
+
+                    .product-cta {
+                        top: 460px;
+
+                        @media screen and (max-width: $md-breakpoint) {
+                            top: 83%;
+                        }
+
+                        @media screen and (max-width: $sm-breakpoint) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .textbox {
+                background: rgba(12, 32, 47, .75);
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                font-weight: bold;
+                flex-wrap: wrap;
+                font-size: 25px;
+                line-height: 40px;
+                letter-spacing: 1px;
+                margin-top: 5%;
+                padding: 30px;
+                position: absolute;
+                z-index: 2;
+                width: 500px;
+
+                @media screen and (max-width: $lg-breakpoint) {
+                    margin-top: 5%;
+                    font-size: 20px;
+                }
+
+                @media screen and (max-width: $sm-breakpoint) {
+                    font-size: 1.2em;
+                    line-height: 1.4em;
+                    padding: 10px;
+                    width: 100%;
+                }
+
+                span {
+                    display: block;
+                    font-size: 2em;
+                    font-style: italic;
+                    margin-top: .1em;
+                }
+
+                .top {
+                    border-bottom: 3px solid #8f989d;
+                    padding-bottom: .7em;
+                }
+
+                .bottom {
+                    font-weight: 300;
+                    font-size: 1em;
+                    line-height: 1.3em;
+                    padding-top: .7em;
+                }
+            }
+
+            .opening-text {
+                align-items: center;
+
+                >div {
+
+                    &:first-child {
+                        border-right: 4px solid #8f989d;
+                        font-family: $main-font;
+                        padding: 0 30px;
+                        text-align: center;
+                        width: 48%;
+
+                        @media screen and (max-width: $lg-breakpoint) {
+                            border: 0;
+                            border-bottom: 4px solid #8f989d;
+                            padding-bottom: 30px;
+                             width: 100%;
+                        }
+                    }
+                    &:last-child {
+                        width: 51%;
+
+                        @include mobile-full-width();
+                    }
+                }
+            }
+
+            .services {
+
+                >a {
+                    
+                    &:first-child {
+                        >div {
+                            background: url('../img/laser.jpg');
+                            background-position: center;
+                            background-size: cover;
+                            box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.4);
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        >div {
+                            background: url('../img/gaufrage.jpg');
+                            background-position: center;
+                            background-size: cover;
+                            box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.4);
+                        }
+                    }
+                }
+            }
+        }
+		/* end homepage styles */
+        /* following are specific styles for corporate homepage */
+
+        &.corporate {
+
+            .textbox {
+                background: none;
+                font-family: $accent-font;
+                width: 70%;
+                max-width: 900px;
+
+                @media screen and (max-width: $md-breakpoint) {
+                    width: 90%;
+                }
+
+                h1 {
+                    font-size: 40px;
+
+                    @media screen and (max-width: $lg-breakpoint) {
+                        font-size: 30px;    
+                    }
+                    @media screen and (max-width: $sm-breakpoint) {
+                        padding-top: 0;
+                        font-size: 23px;    
+                    }
+                }
+            }
+
+            .opening-text {
+
+                >div {
+
+                    &:first-child {
+                        border: 0;
+                        font-family: $accent-font;
+                        text-align: left;
+
+                        @media screen and (max-width: $lg-breakpoint) {
+                            text-align: center;
+                            max-width: 500px;  
+                        }   
+                    }
+                }
+            }
+        }
+    }
 
 
+
+    .landing {
+        height: 100vh;
+
+        .landing-slider {
+            background: black;
+            height: 800px;
+            overflow: hidden;
+
+            .inner {
+                align-items: flex-start;
+
+                h1 {
+                    background: none;
+                    margin-top: 160px;
+                    text-align: center;
+                    width: 800px;
+                }
+
+                p {
+                    top: 420px
+                }
+            }
+
+            .slick-prev,
+            .slick-next {
+                top: 55%;
+                z-index: 2;
+            }
+        }
+    }
 }

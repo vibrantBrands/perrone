@@ -14,13 +14,13 @@ $( document ).ready(function() {
     });
 
   $('.testimonials .scroller').slick({
-      autoplay: true,
+      autoplay: false,
       infinite: true,
       slidesToShow: 1,
       dots: true,
       slidesToScroll: 1,
       cssEase: "ease",
-      autoplaySpeed: 1000,
+      autoplaySpeed: 14000,
       pauseOnHover: false,
       lazyLoad: 'ondemand',
     });
@@ -51,6 +51,19 @@ $( document ).ready(function() {
       lazyLoad: 'ondemand',
     });
 
+    $('.product-images').slick({
+      autoplay: true,
+      infinite: true,
+      slidesToShow: 1,
+      arrows: true,
+      dots: true,
+      slidesToScroll: 1,
+      cssEase: "ease",
+      autoplaySpeed: 3000,
+      pauseOnHover: false,
+      lazyLoad: 'ondemand',
+    });
+
   $('.menu-toggle').click(function(){
         $(this).toggleClass('active');
         $(this).toggleClass('inactive');
@@ -58,6 +71,8 @@ $( document ).ready(function() {
         $('body').toggleClass('menu-open');
     });
 
-  
+  $('.read-specs').click(function(){
+    $('.spec-wrapper').toggleClass('open');
+  });
 
 });

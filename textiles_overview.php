@@ -1,10 +1,10 @@
 <?php require('elements/header.php'); ?>
 
-<?php require('elements/navigation.php'); ?>
+<?php require('elements/navigation_blue.php'); ?>
 
 	<?php 	
 		  $bt = BlockType::getByHandle('autonav');
-		  $bt->controller->displayPages = 'top'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
+		  $bt->controller->displayPages = 'second_level'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
 		  $bt->controller->displayPagesCID = ''; // if display pages is set ‘custom’
 		  $bt->controller->orderBy = 'display_asc';  // 'chrono_desc', 'chrono_asc', 'alpha_asc', 'alpha_desc', 'display_desc','display_asc'             
 		  $bt->controller->displaySubPages = 'relevant';  //none', 'all, 'relevant_breadcrumb', 'relevant'          
@@ -14,7 +14,7 @@
 		?>
 </nav>
 
-<div class="content">
+<div class="content blue-theme">
 	<?php
 	    $a = new Area('Page Header');
 	    $a->display($c);
@@ -111,38 +111,6 @@
 	        ?> 
 		</div>
 	</div>
-	
-	<!-- fourth product -->
-
-	<div class="product-box container">
-		<div>
-			<?php
-	            $a = new Area('Product Image 4');
-	            $a->display($c);
-	        ?>
-			<div class="textbox">
-				<?php
-		            $a = new Area('Product Name 4');
-		            $a->display($c);
-		        ?> 
-				<div class="product-cta">
-					<img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">
-					<div class="text">
-						<?php
-		            		$a = new Area('Product Link 4');
-		            		$a->display($c);
-		        	?> </div>
-				</div>
-			</div>
-		</div>
-		<div>
-			<?php
-	            $a = new Area('Product Description 4');
-	            $a->display($c);
-	        ?> 
-		</div>
-	</div>
-
 </div>
 
-<?php require('elements/footer.php'); ?>
+<?php require('elements/footer_blue.php'); ?>

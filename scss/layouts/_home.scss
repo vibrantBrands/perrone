@@ -10,24 +10,35 @@
         }
 
         .slick-prev {
-            left: 30%;
+            left: 40%;
+
+            @media screen and (max-width: $md-breakpoint) {
+                left: 25%;
+            }
         }
 
         .slick-next {
-            right: 30%;
+            right: 40%;
+
+            @media screen and (max-width: $md-breakpoint) {
+                right: 65%;
+            }
         }
 
         .slick-dots {
-            bottom: 14%;
             right: 5%;
             text-align: right;
+            width: 300px;
 
             @media screen and (max-width: $lg-breakpoint) {
                 display: none !important;
             }
 
             li {
+                text-align: center;
+
                 button {
+                    display: none;
                     height: 0;
                     padding: 0;
                     width: 0;
@@ -65,7 +76,10 @@
 
                 &.slick-active {
                     &:after {
-                        color: $active-number;
+                        background: rgba(0, 0, 0, .5);
+                        border-radius: 50px;
+                        padding: 4px;
+                        display: block;
                     }
                 }
             }
@@ -112,6 +126,12 @@
                 left: 4%;
                 top: 80%;
 
+                .text {
+                    background: rgba(0, 0, 0, .5);
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                }
+
                 @media screen and (max-width: $lg-breakpoint) {
                     top: 57%;
                 }
@@ -127,18 +147,18 @@
     }
 
     .landing {
-    	background: $black;
-    	height: 100vh;
+        background: $black;
+        height: 100vh;
 
-    	@media screen and (max-width: $lg-breakpoint) {
+        @media screen and (max-width: $lg-breakpoint) {
             background: url('../img/brown-leather.png');
         }
 
         .landing-slider {
-        	
-        	@media screen and (max-width: $lg-breakpoint) {
-           		display: none;
-        	}
+
+            @media screen and (max-width: $lg-breakpoint) {
+                display: none;
+            }
         }
     }
 
@@ -171,7 +191,7 @@
     }
 
     .links {
-		text-shadow: 2px 2px 4px #000000;
+        text-shadow: 2px 2px 4px #000000;
         font-size: 1.3em;
         font-weight: 600;
         justify-content: center;
@@ -183,44 +203,59 @@
             @include translate-x-center();
             flex-direction: column;
         }
-        
+
         >div {
-        	padding: 10px 80px;
-        	border-right: 1px solid $white;
+            padding: 10px 80px;
+            border-right: 1px solid $white;
 
-        	@media screen and (max-width: $lg-breakpoint) {
-            	padding: 10px 0px;
-        	}
+            a {
+                color: $white;
+                text-decoration: none;
+            }
 
-        	&:first-child {
-        		padding-left: 0;
-        	}
+            @media screen and (max-width: $lg-breakpoint) {
+                padding: 10px 0px;
+            }
 
-        	&:last-child {
-        		border: 0;
-        	}
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                border: 0;
+            }
         }
     }
 
     .social {
-    	bottom: 10%;
-    	font-size: 1.5em;
-    	left: 53%;
+        bottom: 10%;
+        font-size: 1.5em;
+        left: 53%;
 
-    	@media screen and (max-width: $lg-breakpoint) {
+        @media screen and (max-width: $lg-breakpoint) {
             @include translate-x-center();
         }
 
-    	>div {
-    		opacity: .5;
-    		padding: 0 20px;
-    	}
+        >div {
+            opacity: .5;
+            padding: 0 20px;
+
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+            
+        }
     }
 
     .opening-text {
         display: flex;
 
         @include flex-col-layout();
+
+        @media screen and (max-width: $lg-breakpoint) {
+            text-align: center;
+        }
 
         div {
             padding: 30px 0;
@@ -241,7 +276,7 @@
             &:nth-child(3) {
                 font-size: 20px;
                 font-weight: 300;
-                line-height: 24px;
+                line-height: 1.3em;
                 padding: 30px;
                 width: 60%;
 
@@ -250,30 +285,58 @@
         }
     }
 
-    .products,
-    .customization {
-        color: $white;
-        font-size: 36px;
-        display: flex;
-        justify-content: space-between;
+    .content {
+            .products,
+            .customization {
+                color: $white;
+                display: flex;
+                font-size: 36px;
+                justify-content: space-between;
+                margin-top: 0;
 
-        >div {
-            align-items: center;
-            background: url('../img/vinyl-bg.png');
-            background-size: cover;
-            box-shadow: $default-box-shadow;
-            display: flex;
-            height: 180px;
-            justify-content: center;
-            padding: 20px;
-            text-shadow: $default-font-shadow;
-            width: 48%;
+                >a {
+                    display: block;
+                    height: 180px;
+                    margin: 20px;
+                    width: 100%;
+                    text-decoration: none;
+                    color: $white;
 
-            &:first-child {
-                background: url('../img/noble-2.png');
+                    @media screen and (max-width: $lg-breakpoint) {
+                        margin: 50px 0 0 0;
+                        text-align: center;
+                    }
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+                        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+                        justify-content: center;
+                        box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.4);
+                    }
+
+                    &:first-child {
+                        >div {
+                            background: url('../img/brown-leather.png');
+                            background-position: center;
+                            background-size: cover;
+                            height: 100%;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        >div {
+                            background: url('../img/alcantara_351.jpg');
+                            background-position: center;
+                            background-size: cover;
+                            height: 100%;
+                        }
+                    }
+                }
             }
-        }
     }
+
+
 
     .customization {
 
@@ -284,32 +347,83 @@
 
     .video {
         background: url('../img/vid-bg.png');
+        background-position: 0 50px;
         background-repeat: repeat-x;
-        display: block;
-        height: 500px;
-        margin-top: 160px;
+        display: flex;
+        margin: 160px auto 0;
+        text-align: center;
+        position: relative;
         width: 100%;
 
         @media screen and (max-width: $lg-breakpoint) {
             background: none;
         }
 
-        img {
-            margin-top: -70px;
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            position: relative;
+            margin: 0 auto;
             width: 100%;
+        }
+
+       .video-cta {
+            align-items: center;
+            color: $white;
+            position: absolute;
+            font-size: 20px;
+            display: flex;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: $default-font-shadow;
+            justify-content: center;
+
+            @media screen and (max-width: $lg-breakpoint) {
+                 font-size: 15px;
+            }
+            @media screen and (max-width: $sm-breakpoint) {
+                 font-size: 10px;
+            }
+
+            img {
+                align-self: center;
+            }
+
+            p {
+                font-size: 1.3em;
+                line-height: 1.7em;
+            }
+
+            span {
+                letter-spacing: .2em;
+                font-size: 1.8em;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            @include translate-center();
+            z-index: 2;
+        }
+
+        img {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
         }
     }
 
     .content {
 
         .testimonials {
-            margin-top: -100px;
+            margin-top: 100px;
             padding: 0 15%;
             text-align: center;
-
-            @media screen and (max-width: $lg-breakpoint) {
-                margin-top: -280px;
-            }
 
             @media screen and (min-width: 1600px) {
                 margin-top: 0;
