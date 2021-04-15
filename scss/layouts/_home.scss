@@ -1,3 +1,4 @@
+
 .perrone {
 
     .image-slider {
@@ -180,8 +181,9 @@
         font-size: 2.8em;
         font-weight: 800;
         position: absolute;
-        top: 180px;
+        text-align: center;
         text-shadow: 2px 2px 4px #000000;
+        top: 180px;
         width: 600px;
 
         @media screen and (max-width: $lg-breakpoint) {
@@ -199,6 +201,7 @@
         width: 70%;
 
         @media screen and (max-width: $lg-breakpoint) {
+            align-items: center;
             width: 100%;
             @include translate-x-center();
             flex-direction: column;
@@ -207,6 +210,14 @@
         >div {
             padding: 10px 80px;
             border-right: 1px solid $white;
+
+            @media screen and (max-width: 1300px) {
+                padding: 10px 30px;
+            }
+
+            @media screen and (max-width: $lg-breakpoint) {
+                border: none;
+            }
 
             a {
                 color: $white;
@@ -240,6 +251,10 @@
             opacity: .5;
             padding: 0 20px;
 
+            .fab {
+                text-shadow: $default-font-shadow;
+            }
+
             a {
                 color: $white;
                 text-decoration: none;
@@ -250,6 +265,7 @@
 
     .opening-text {
         display: flex;
+        padding-bottom: 50px;
 
         @include flex-col-layout();
 
@@ -277,7 +293,7 @@
                 font-size: 20px;
                 font-weight: 300;
                 line-height: 1.3em;
-                padding: 30px;
+                padding: 0 20px 0 50px;
                 width: 60%;
 
                 @include mobile-full-width();
@@ -346,11 +362,11 @@
     }
 
     .video {
-        background: url('../img/vid-bg.png');
+        background: url('../img/commercial-video-bg.jpg');
         background-position: 0 50px;
         background-repeat: repeat-x;
         display: flex;
-        margin: 160px auto 0;
+        margin: 100px auto;
         text-align: center;
         position: relative;
         width: 100%;
@@ -361,12 +377,25 @@
 
         a {
             text-decoration: none;
+            width: 100%;
         }
 
         .container {
             position: relative;
             margin: 0 auto;
             width: 100%;
+        }
+
+        .video-box {
+            background: url('../img/commercial-video.png');
+            background-size: cover;
+            height: 350px;
+            width: 100%;
+            max-width: 1200px;
+
+            @media screen and (max-width: $lg-breakpoint) {
+                width: 100%;
+            }
         }
 
        .video-cta {
@@ -424,6 +453,7 @@
             margin-top: 100px;
             padding: 0 15%;
             text-align: center;
+            line-height: 21px;
 
             @media screen and (min-width: 1600px) {
                 margin-top: 0;

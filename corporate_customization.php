@@ -1,6 +1,6 @@
 <?php require('elements/header.php'); ?>
 
-<?php require('elements/navigation_blue.php'); ?>
+<?php require('elements/navigation.php'); ?>
 
 	<?php 	
 		  $bt = BlockType::getByHandle('autonav');
@@ -14,7 +14,7 @@
 		?>
 </nav>
 
-<div class="content blue-theme">
+<div class="content">
 	<?php
 	    $a = new Area('Page Header');
 	    $a->display($c);
@@ -119,4 +119,4 @@
 
 </div>
 
-<?php require('elements/footer_blue.php'); ?>
+<?php require('elements/footer.php'); ?>

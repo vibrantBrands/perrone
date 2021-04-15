@@ -16,15 +16,36 @@
 
 <div class="content blue-theme">
 	<?php
-            $a = new Area('Header');
-            $a->display($c);
-        ?>
-    <div class="container">
-    	<?php
-            $a = new Area('Content');
-            $a->display($c);
-        ?>
-    </div>
+        $a = new Area('Header');
+        $a->display($c);
+    ?>
+
+	<div class="container">
+    	<div class="news">
+	    	<div class="blogfeed">
+	    		<h2><i class="far fa-newspaper"></i> Latest News</h2>
+				<?php
+			        $a = new Area('Blog Feed');
+			        $a->display($c);
+			     ?>
+	     	</div>
+	     	<div class="events">
+	     		<h2><i class="far fa-calendar"></i> Upcoming Events</h2>
+	     		<div class="wrapper">
+	     			<?php
+			        	$a = new Area('Events Feed');
+			        	$a->display($c);
+			     	?>
+	     		</div>
+	     		<h2><i class="fas fa-at"></i> Social Media</h2>
+	     		
+	     		<div class="wrapper">
+	     			<div class="commonninja_component" comp-type="feed" comp-id="780c8b16-4b3d-471b-ab19-3b5e9359bb83"></div>
+	     		</div>
+				
+	     	</div>
+    	</div>
+	</div>
 </div>
 
 <?php require('elements/footer_blue.php'); ?>

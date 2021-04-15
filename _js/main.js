@@ -75,4 +75,11 @@ $( document ).ready(function() {
     $('.spec-wrapper').toggleClass('open');
   });
 
+  $('.nav .fas').click(function(){
+    console.log('arrow click');
+    $(this).toggleClass('open');
+    $(this).siblings('ul').toggle();
+  });
+
+
 });

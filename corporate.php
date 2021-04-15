@@ -2,13 +2,12 @@
 
 <?php require('elements/navigation.php'); ?>
 
-	
 	<?php 	
 		  $bt = BlockType::getByHandle('autonav');
 		  $bt->controller->displayPages = 'second_level'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
 		  $bt->controller->displayPagesCID = ''; // if display pages is set ‘custom’
 		  $bt->controller->orderBy = 'display_asc';  // 'chrono_desc', 'chrono_asc', 'alpha_asc', 'alpha_desc', 'display_desc','display_asc'             
-		  $bt->controller->displaySubPages = 'relevant';  //none', 'all, 'relevant_breadcrumb', 'relevant'          
+		  $bt->controller->displaySubPages = 'all';  //none', 'all, 'relevant_breadcrumb', 'relevant'          
 		  $bt->controller->displaySubPageLevels = 'all'; // 'enough', 'enough_plus1', 'all', 'custom'
 		  $bt->controller->displaySubPageLevelsNum = ''; // if displaySubPages is set 'custom'
 		  $bt->render('view'); // for template 'templates/template_name';
@@ -27,7 +26,6 @@
 					<img src="<?php echo $this->getThemePath(); ?>/img/heroes/corporate/gennaio.jpg" class="product-pic" />
 					<a href="/corporate/alcantara">
 						<div class="product-cta">
-							
 								<div class="text">View this product</div>
 						</div>
 						</a>
@@ -71,29 +69,41 @@
 			</div>
 		</div>
 		<div class="container products">
-			<a href="/commercial/genuine-leather">
+			<a href="/corporate/genuine-leather">
 				<div>
 					Genuine Leather
 				</div>
 			</a>
-			<a href="/commercial/textile">
+			<a href="/corporate/alcantara">
 				<div>
-					Textiles
+					Alcantara
 				</div>
 			</a>
 		</div>
 		<div class="container products services">
-			<a href="commercial/customization">
-			<div>
-				Customization
-			</div>
+			<a href="/corporate/monulite">
+				<div>
+					Monulite
+				</div>
+			</a>
+			<a href="/corporate/corporate-customization">
+				<div>
+					Customization
+				</div>
 			</a>
 		</div>
 		<div class="video">
-			<div class="container">
-				<a href="https://www.youtube.com/watch?v=9HxJBbKO2Ow" data-lity><img src="<?php echo $this->getThemePath(); ?>/img/video-thumb.png" alt="video thumb">
-				</a>
-			</div>
+			<a href="https://www.youtube.com/watch?v=9HxJBbKO2Ow" data-lity>
+				<div class="container">
+					<div class="video-box">
+						<div class="video-cta">
+							<img src="<?php echo $this->getThemePath(); ?>/img/play-icon.png" alt="video thumb">
+							<p>Corporate<br />
+							<span>&</span>VIP</p>
+						</div>
+					</div>
+				</div>
+			</a>
 		</div>
 		<div class="container testimonials">
 			<h2>Testimonials</h2>

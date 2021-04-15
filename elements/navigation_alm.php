@@ -14,5 +14,5 @@
     <a href="/">
 		  <img src="<?php echo $this->getThemePath(); ?>/img/perrone-logo.png" class="logo"/>
     </a>
-    <h1>Commercial</h1>
+    <a href="/alm" class="alm-link"><h1>ALM</h1></a>
 	

@@ -1,6 +1,6 @@
 <?php require('elements/header.php'); ?>
 
-<?php require('elements/navigation_blue.php'); ?>
+<?php require('elements/navigation.php'); ?>
 
 	<?php 	
 		  $bt = BlockType::getByHandle('autonav');
@@ -14,24 +14,19 @@
 		?>
 </nav>
 
-<div class="content blue-theme">
-	<div class="header-area">
-		<?php
-	    	$a = new Area('Page Header');
-	    	$a->display($c);
-		?>
-	</div>
-	<div class="container">
-		<?php
-		    $a = new Area('Product Text');
-		    $a->display($c);
+<div class="content">
+	<?php
+	    $a = new Area('Page Header');
+	    $a->display($c);
 	?>
-	</div>
 
 	<!-- first product -->
 	<div class="product-box container">
 		<div>
-			<img src="<?php echo $this->getThemePath(); ?>/img/samples/elite_horiz.png" alt="elite thumb">
+			<?php
+	            $a = new Area('Product Image 1');
+	            $a->display($c);
+	        ?>
 			<div class="textbox">
 				<?php
 		            $a = new Area('Product Name 1');
@@ -59,13 +54,17 @@
 
 	<div class="product-box container">
 		<div>
-			<img src="<?php echo $this->getThemePath(); ?>/img/samples/featherweight_horiz.png" alt="Featherweight">
+			<?php
+	            $a = new Area('Product Image 2');
+	            $a->display($c);
+	        ?>
 			<div class="textbox">
 				<?php
 		            $a = new Area('Product Name 2');
 		            $a->display($c);
 		        ?> 
 				<div class="product-cta">
+					<!-- <img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek"> -->
 					<div class="text">
 						<?php
 		            		$a = new Area('Product Link 2');
@@ -86,13 +85,17 @@
 
 	<div class="product-box container">
 		<div>
-			<img src="<?php echo $this->getThemePath(); ?>/img/samples/Skyline.JPG" alt="Skyline">
+			<?php
+	            $a = new Area('Product Image 3');
+	            $a->display($c);
+	        ?>
 			<div class="textbox">
 				<?php
 		            $a = new Area('Product Name 3');
 		            $a->display($c);
 		        ?> 
 				<div class="product-cta">
+					<!-- <img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">  -->
 					<div class="text">
 						<?php
 		            		$a = new Area('Product Link 3');
@@ -108,61 +111,6 @@
 	        ?> 
 		</div>
 	</div>
-	
-	<!-- fourth product -->
-
-	<div class="product-box container">
-		<div>
-			<img src="<?php echo $this->getThemePath(); ?>/img/samples/select_horiz.png" alt="Select">
-			<div class="textbox">
-				<?php
-		            $a = new Area('Product Name 4');
-		            $a->display($c);
-		        ?> 
-				<div class="product-cta">
-					<div class="text">
-						<?php
-		            		$a = new Area('Product Link 4');
-		            		$a->display($c);
-		        	?> </div>
-				</div>
-			</div>
-		</div>
-		<div>
-			<?php
-	            $a = new Area('Product Description 4');
-	            $a->display($c);
-	        ?> 
-		</div>
-	</div>
-
-	<!-- fifth product -->
-
-	<div class="product-box container">
-		<div>
-			<img src="<?php echo $this->getThemePath(); ?>/img/samples/shearling.png" alt="Shearling">
-			<div class="textbox">
-				<?php
-		            $a = new Area('Product Name 5');
-		            $a->display($c);
-		        ?> 
-				<div class="product-cta">
-					<div class="text">
-						<?php
-		            		$a = new Area('Product Link 5');
-		            		$a->display($c);
-		        	?> </div>
-				</div>
-			</div>
-		</div>
-		<div>
-			<?php
-	            $a = new Area('Product Description 5');
-	            $a->display($c);
-	        ?> 
-		</div>
-	</div>
-
 </div>
 
-<?php require('elements/footer_blue.php'); ?>
+<?php require('elements/footer.php'); ?>

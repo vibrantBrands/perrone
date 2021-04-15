@@ -1,68 +1,118 @@
 <?php require('elements/header.php'); ?>
 
-<?php require('elements/navigation.php'); ?>
+<?php require('elements/navigation_alm.php'); ?>
 
 	<?php 	
 		  $bt = BlockType::getByHandle('autonav');
-		  $bt->controller->displayPages = 'top'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
+		  $bt->controller->displayPages = 'below'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
 		  $bt->controller->displayPagesCID = ''; // if display pages is set ‘custom’
 		  $bt->controller->orderBy = 'display_asc';  // 'chrono_desc', 'chrono_asc', 'alpha_asc', 'alpha_desc', 'display_desc','display_asc'             
-		  $bt->controller->displaySubPages = 'relevant';  //none', 'all, 'relevant_breadcrumb', 'relevant'          
+		  $bt->controller->displaySubPages = 'all';  //none', 'all, 'relevant_breadcrumb', 'relevant'          
 		  $bt->controller->displaySubPageLevels = 'all'; // 'enough', 'enough_plus1', 'all', 'custom'
 		  $bt->controller->displaySubPageLevelsNum = ''; // if displaySubPages is set 'custom'
 		  $bt->render('view'); // for template 'templates/template_name';
 		?>
 </nav>
 
-<div class="content">
-	<?php
-            $a = new Area('Product Name');
-            $a->display($c);
-    ?>  
-	<div class="product-description container">
+<div class="content blue-theme alm">
+	<a href="https://vimeo.com/395027053" data-lity>
+		<div class="header-area">
+			<img src='<?php echo $this->getThemePath(); ?>/img/play-icon.png' alt="play icon">
+		</div>
+	</a>
+
+
+	<!-- first product -->
+	<div class="product-box container">
 		<div>
 			<?php
-            	$a = new Area('Product Top Graf');
-            	$a->display($c);
-        	?>  
+	            $a = new Area('Product Image 1');
+	            $a->display($c);
+	        ?>
+			<div class="textbox">
+				<?php
+		            $a = new Area('Product Name 1');
+		            $a->display($c);
+		        ?> 
+				<div class="product-cta">
+					<!--<img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">  -->
+					<div class="text">
+						<?php
+		            		$a = new Area('Product Link 1');
+		            		$a->display($c);
+		        	?> </div>
+				</div>
+			</div>
 		</div>
 		<div>
-			<div class="slider-wrapper">
-				<div class="product-slider">
-					<?php
-            			$a = new Area('Product Images');
-            			$a->display($c);
-        			?> 
+			<?php
+	            $a = new Area('Product Description 1');
+	            $a->display($c);
+	        ?> 
+		</div>
+	</div>
+
+	<!-- second product -->
+
+	<div class="product-box container">
+		<div>
+			<?php
+	            $a = new Area('Product Image 2');
+	            $a->display($c);
+	        ?>
+			<div class="textbox">
+				<?php
+		            $a = new Area('Product Name 2');
+		            $a->display($c);
+		        ?> 
+				<div class="product-cta">
+					<!--<img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">  -->
+					<div class="text">
+						<?php
+		            		$a = new Area('Product Link 2');
+		            		$a->display($c);
+		        	?> </div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container full">
-		<?php
-            $a = new Area('Product Description');
-            $a->display($c);
-        ?>
-	</div>
-	<div class="video-boxes container">
-		
-		<a href="https://youtu.be/2YPdBv2Y2MM" data-lity>
-			<div>
-				<div class="textbox">
-					<h2>Alcantra Care</h2>
-						<img src="<?php echo $this->getThemePath(); ?>/img/play-icon.png"/>
-				</div>
-			</div>
-		</a>
-		<a href="https://youtu.be/aCQBEoOwLBs" data-lity>
-			<div>
-				<div class="textbox">
-					<h2>Satisfied Customers</h2>
-						<img src="<?php echo $this->getThemePath(); ?>/img/play-icon.png"/>
-				</div>
-			</div>
-		</a>
+		<div>
+			<?php
+	            $a = new Area('Product Description 2');
+	            $a->display($c);
+	        ?> 
+		</div>
 	</div>
 
+	<!-- third product -->
+
+	<div class="product-box container">
+		<div>
+			<?php
+	            $a = new Area('Product Image 3');
+	            $a->display($c);
+	        ?>
+			<div class="textbox">
+				<?php
+		            $a = new Area('Product Name 3');
+		            $a->display($c);
+		        ?> 
+				<div class="product-cta">
+					<!--<img src="<?php echo $this->getThemePath(); ?>/img/seek.png" alt="view product" class="seek">  -->
+					<div class="text">
+						<?php
+		            		$a = new Area('Product Link 3');
+		            		$a->display($c);
+		        	?> </div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<?php
+	            $a = new Area('Product Description 3');
+	            $a->display($c);
+	        ?> 
+		</div>
+	</div>
 </div>
 
-<?php require('elements/footer.php'); ?>
+<?php require('elements/footer_blue.php'); ?>

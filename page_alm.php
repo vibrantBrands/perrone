@@ -1,6 +1,6 @@
 <?php require('elements/header.php'); ?>
 
-<?php require('elements/navigation.php'); ?>
+<?php require('elements/navigation_alm.php'); ?>
 
 	<?php 	
 		  $bt = BlockType::getByHandle('autonav');
@@ -14,13 +14,14 @@
 		?>
 </nav>
 
-<div class="content blue-theme">
+<div class="content blue-theme product">
 	<?php
 	    $a = new Area('Page Header');
 	    $a->display($c);
 	?>
 
 	<div class="container">
+		
 		<div class="product-images">
 				<?php
 			    $a = new Area('Product Images');

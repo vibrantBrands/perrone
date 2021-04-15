@@ -1,0 +1,52 @@
+.perrone {
+
+    .news {
+        display: flex;
+        justify-content: space-between;
+
+        @include flex-col-layout();
+
+        .blogfeed {
+            width: 55%;
+
+            @include mobile-full-width();
+
+            .ccm-block-page-list-page-entry {
+                border-bottom: 3px solid $blue-theme-border;
+            }
+        }
+
+        .events {
+            width: 35%;
+             @include mobile-full-width();
+        }
+
+        h2 {
+            margin: 0 auto;
+            font-weight: normal;
+        }
+
+        .ccm-block-page-list-page-entry-text {
+            padding: 30px 0 40px;
+        }
+
+        .ccm-block-page-list-title {
+            color: $blue-theme-header;
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+
+        .ccm-block-page-list-description {
+            font-size: 18px;
+            line-height: 28px;
+            hyphens: auto;
+        }
+
+        .wrapper {
+            margin: 30px auto;
+            box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
+            padding: 0 5%;
+        }
+    }
+}

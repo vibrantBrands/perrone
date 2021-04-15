@@ -2,33 +2,22 @@
 .perrone  {
 
 	.blue-theme {
+
+		h1, h2, h3, h4 {
+			color: $blue-theme-header;
+		}
+
 		h1 {
 			background: #f4f9fc;
 			font-family: $main-font;
 			font-style: italic;
-			color: #002e52;
+
+			@media screen and (max-width: $lg-breakpoint) {
+            	font-size: 30px;
+        	}
 		}
 
-		.chrome-free {
-			display: flex;
-			
-			p {
-				font-size: 20px;
-				line-height: 24px;
-			}
 
-			>div {
-				width: 90%;
-
-				&:first-child {
-					width: 10%;
-				}
-			}
-
-			img {
-				width: 180px;
-			}
-		}
 	}
 
 }
